@@ -28,5 +28,34 @@ npm i -D webpack webpack-cli webpack-dev-server typescript ts-loader
 3. Create project structure
 
 ```bash
-mkdir src && touch src/index.js && touch webpack.config.js && tsc --init
+mkdir src && touch src/index.ts && touch webpack.config.js && tsc --init
+```
+
+4. Set your desired JS `target` in `tsconfig.json` which `webpack` will respect
+5. Set `// "outDir": "./",` to `"outDir": "./dist/",`
+
+6. Add the following to your `webpack.config.js`:
+
+```javascript
+const path = require('path');
+
+module.exports = {
+	entry: './src/index.ts',
+	module: {
+		rules: [
+			{
+				test: /\.tsx?$/,
+				use: 'ts-loader',
+				exclude: /node_modules/,
+			},
+		],
+	},
+	resolve: {
+		extensions: ['.tsx', '.ts', '.js'],
+	},
+	output: {
+		filename: 'bundle.js',
+		path: path.resolve(__dirname, 'dist'),
+	},
+};
 ```
