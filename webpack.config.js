@@ -1,7 +1,9 @@
 const path = require('path');
 
+const mode = process.env.NODE_ENV || 'development'; // default to development
+
 module.exports = {
-  mode: 'development',
+  mode: mode,
   entry: './src/index.ts',
   module: {
     rules: [
@@ -19,7 +21,7 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  devtool: 'inline-source-map',
+  devtool: mode === 'development' ? 'inline-source-map' : false,
   devServer: {
     static: {
       directory: path.join(__dirname, './'), // that should point where you index.html is
