@@ -7,7 +7,7 @@ const mode = process.env.NODE_ENV || 'development'; // default to development
 
 module.exports = {
 	mode: mode,
-	entry: './src/index.ts',
+	entry: './src/app.ts',
 	module: {
 		rules: [
 			{

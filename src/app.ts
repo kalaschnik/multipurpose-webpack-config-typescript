@@ -15,3 +15,4 @@ const data = await response.json();
 console.log(data.value);
 
 console.log(myLog('hello'));
+console.log(myLog('hello'));
