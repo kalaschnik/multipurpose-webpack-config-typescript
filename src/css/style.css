@@ -1,0 +1,7 @@
+body {
+	background-image: linear-gradient(
+		hsl(270deg 50% 40% / 0.9),
+		hsl(328deg 100% 54% / 0.9)
+	);
+	font-family: system-ui;
+}

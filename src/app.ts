@@ -1,5 +1,7 @@
 import _ from 'lodash';
 import { myLog } from './testFunction';
+import './css/app.css';
+import './css/style.css';
 
 // let names: string[];
 let names: Array<string | number>; // generic array type (a type connected to another type)
