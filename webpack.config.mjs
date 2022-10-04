@@ -1,11 +1,18 @@
-const CopyPlugin = require('copy-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+// node packages
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const path = require('path');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// webpack plugins
+import CopyPlugin from 'copy-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import RemarkHTML from 'remark-html';
 
 const mode = process.env.NODE_ENV || 'development'; // default to development
 
-module.exports = {
+export default {
 	mode: mode,
 	entry: './src/app.ts',
 	module: {

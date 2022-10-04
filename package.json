@@ -3,6 +3,7 @@
 	"version": "0.0.1",
 	"description": "Multipurpose webpack config for TypeScript projects",
 	"private": true,
+	"type": "module",
 	"scripts": {
 		"start": "webpack serve",
 		"build": "NODE_ENV=production webpack"
