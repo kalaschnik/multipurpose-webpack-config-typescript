@@ -5,3 +5,7 @@ body {
 	);
 	font-family: system-ui;
 }
+
+#root {
+	margin: 15px;
+}

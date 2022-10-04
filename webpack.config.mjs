@@ -26,6 +26,22 @@ export default {
 				test: /\.css$/i,
 				use: ['style-loader', 'css-loader'],
 			},
+			{
+				test: /\.md$/,
+				use: [
+					{
+						loader: 'html-loader',
+					},
+					{
+						loader: 'remark-loader',
+						options: {
+							remarkOptions: {
+								plugins: [RemarkHTML],
+							},
+						},
+					},
+				],
+			},
 		],
 	},
 	resolve: {

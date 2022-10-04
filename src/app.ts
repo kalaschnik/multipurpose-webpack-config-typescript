@@ -3,6 +3,8 @@ import { myLog } from './testFunction';
 import './css/app.css';
 import './css/style.css';
 
+import md from './index.md';
+
 // let names: string[];
 let names: Array<string | number>; // generic array type (a type connected to another type)
 let favoriteActivities: (string | number)[];
@@ -18,3 +20,5 @@ console.log(data.value);
 
 console.log(myLog('hello'));
 console.log(myLog('hello'));
+
+document.getElementById('root')!.innerHTML = md;
