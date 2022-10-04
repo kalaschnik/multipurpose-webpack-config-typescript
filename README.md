@@ -4,7 +4,13 @@
 
 ## Config Overview
 
-- todo
+- Dev Server (`npm start`)
+- Top-Level await (through `webpack`, this requires (at least) `"target": "es2017", "module": "es2022"` in `tsconfig.json`)
+- Single Webpack Config for Dev and Production
+  - Auto-switch mode to production when using `npm run build`
+  - source-maps-enabled on dev — disabled in prod
+- static assets sit in /public and get copied to dist on build (CRA style)
+- Using HtmlWebpackPlugin with templates for multiple entry points and outputs
 
 ## Replicate
 
@@ -42,24 +48,24 @@ const path = require('path');
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.ts',
-  module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-      },
-    ],
-  },
-  resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
-  },
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-  },
-  devtool: 'source-map',
+	entry: './src/index.ts',
+	module: {
+		rules: [
+			{
+				test: /\.tsx?$/,
+				use: 'ts-loader',
+				exclude: /node_modules/,
+			},
+		],
+	},
+	resolve: {
+		extensions: ['.tsx', '.ts', '.js'],
+	},
+	output: {
+		filename: 'bundle.js',
+		path: path.resolve(__dirname, 'dist'),
+	},
+	devtool: 'source-map',
 };
 ```
 
