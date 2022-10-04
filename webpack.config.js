@@ -47,4 +47,7 @@ module.exports = {
 		historyApiFallback: true, // enable HTML5 history API
 		devMiddleware: { writeToDisk: true },
 	},
+	experiments: {
+		topLevelAwait: true,
+	},
 };
