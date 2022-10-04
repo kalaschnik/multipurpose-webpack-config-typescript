@@ -2,6 +2,10 @@ import _ from 'lodash';
 import { myLog } from './testFunction';
 import './css/app.css';
 import './css/style.css';
+import logoPath from './logo.svg';
+import earthGifPath from './earth.gif';
+
+console.log(earthGifPath);
 
 import md from './index.md';
 
@@ -22,3 +26,8 @@ console.log(myLog('hello'));
 console.log(myLog('hello'));
 
 document.getElementById('root')!.innerHTML = md;
+document.getElementById('svg')!.innerHTML = logoPath;
+
+const img = document.createElement('img');
+img.src = earthGifPath;
+document.getElementById('image')!.appendChild(img);
