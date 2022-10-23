@@ -24,7 +24,7 @@ export default {
 			},
 			{
 				test: /\.css$/i,
-				use: ['style-loader', 'css-loader'],
+				use: ['style-loader', 'css-loader', 'postcss-loader'],
 			},
 			{
 				test: /\.(png|gif|jpg|jpeg)$/i,
