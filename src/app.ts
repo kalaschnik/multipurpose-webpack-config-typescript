@@ -30,4 +30,5 @@ document.getElementById('svg')!.innerHTML = logoPath;
 
 const img = document.createElement('img');
 img.src = earthGifPath;
+img.width = 100;
 document.getElementById('image')!.appendChild(img);

@@ -2,6 +2,10 @@
 
 > See https://github.com/kalaschnik/multipurpose-webpack-config for my vanialla JS config
 
+<p align="center">
+<img src="src/demo.png" width="500px">
+</p>
+
 ## Config Overview
 
 - Dev Server (`npm start`)
