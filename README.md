@@ -17,7 +17,12 @@
 - Inline SVG support (using `asset/source`)
 - Image support (using `asset/resource`)
 
-## Replicate
+## Replicate (initial setup)
+
+<details>
+  <summary>Show</summary>
+  
+  *Note that this is only the initial setup I started with. Check out the project’s config files for the current setup!*
 
 1. Init npm
 
@@ -53,24 +58,24 @@ const path = require('path');
 const path = require('path');
 
 module.exports = {
-	entry: './src/index.ts',
-	module: {
-		rules: [
-			{
-				test: /\.tsx?$/,
-				use: 'ts-loader',
-				exclude: /node_modules/,
-			},
-		],
-	},
-	resolve: {
-		extensions: ['.tsx', '.ts', '.js'],
-	},
-	output: {
-		filename: 'bundle.js',
-		path: path.resolve(__dirname, 'dist'),
-	},
-	devtool: 'source-map',
+  entry: './src/index.ts',
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+    ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+  },
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  devtool: 'source-map',
 };
 ```
 
@@ -86,3 +91,5 @@ module.exports = {
     "build": "webpack"
   },
 ```
+
+</details>
