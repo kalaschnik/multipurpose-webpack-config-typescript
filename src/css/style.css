@@ -10,6 +10,11 @@ body {
 	margin: 15px;
 }
 
+img {
+	filter: grayscale(100%);
+	appearance: none;
+}
+
 #root {
 	display: flex;
 	flex-direction: column;

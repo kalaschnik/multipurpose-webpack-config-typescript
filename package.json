@@ -24,6 +24,7 @@
 	"homepage": "https://github.com/kalaschnik/multipurpose-webpack-config-typescript#readme",
 	"devDependencies": {
 		"@types/lodash": "^4.14.186",
+		"autoprefixer": "^10.4.12",
 		"copy-webpack-plugin": "^11.0.0",
 		"css-loader": "^6.7.1",
 		"html-loader": "^4.2.0",
