@@ -12,6 +12,7 @@
 - static assets sit in /public and get copied to dist on build (CRA style)
 - Using HtmlWebpackPlugin with templates for multiple entry points and outputs
 - CSS in `<style>` tags to reduce requests
+- PostCSS support (w/ [native CSS nesting enabled](https://www.w3.org/TR/css-nesting-1/))
 - Markdown support using [`remark-html`](https://webpack.js.org/loaders/remark-loader/)
 - Inline SVG support (using `asset/source`)
 - Image support (using `asset/resource`)
