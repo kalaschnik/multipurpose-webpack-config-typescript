@@ -4,6 +4,7 @@ import './css/app.css';
 import './css/style.css';
 import logoPath from './logo.svg';
 import earthGifPath from './earth.gif';
+import gsap from 'gsap';
 
 console.log(earthGifPath);
 
