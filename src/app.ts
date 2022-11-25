@@ -33,3 +33,10 @@ const img = document.createElement('img');
 img.src = earthGifPath;
 img.width = 100;
 document.getElementById('image')!.appendChild(img);
+
+gsap.to('p', {
+	y: 200,
+	repeat: -1,
+	yoyo: true,
+	transformOrigin: 'center center',
+});
